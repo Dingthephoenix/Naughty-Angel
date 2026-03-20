@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>贪吃蛇 Snake</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <div class="title">
+          <h1>贪吃蛇</h1>
+          <p class="hint">方向键 / WASD 控制，空格暂停，R 重开</p>
+        </div>
+
+        <div class="panel" aria-label="游戏面板">
+          <div class="score">
+            <span class="score__label">分数</span>
+            <span id="scoreValue" class="score__value">0</span>
+          </div>
+          <div class="buttons">
+            <button id="startBtn" class="btn btn--primary" type="button">开始</button>
+            <button id="resetBtn" class="btn" type="button">重开</button>
+          </div>
+        </div>
+      </header>
+
+      <section class="stage" aria-label="游戏区域">
+        <canvas id="gameCanvas" width="600" height="400" aria-label="贪吃蛇画布"></canvas>
+        <div id="statusOverlay" class="overlay" aria-live="polite" hidden></div>
+      </section>
+    </main>
+
+    <script src="./src/bundle.js"></script>
+  </body>
+</html>
